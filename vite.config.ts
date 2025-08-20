@@ -6,6 +6,18 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
+    include: [
+      '@fullcalendar/core',
+      '@fullcalendar/daygrid',
+      '@fullcalendar/timegrid',
+      '@fullcalendar/interaction',
+      '@fullcalendar/react'
+    ]
+  },
+  resolve: {
+    alias: {
+      '@fullcalendar/core': '@fullcalendar/core',
+    }
   },
   server: {
     port: 3000,
